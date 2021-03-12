@@ -18,3 +18,4 @@ for idx in range(len(folder_lst)):
     dir_path = os.path.join(main_folder, folder_lst[idx])
     if not os.path.exists(dir_path):
         os.makedirs(dir_path)
+
