@@ -1,3 +1,4 @@
+# __author__ Соловьева Дарья Викторовна
 # 1. Создать класс TrafficLight (светофор).
 # определить у него один атрибут color (цвет) и метод running (запуск);
 # атрибут реализовать как приватный;
@@ -15,25 +16,16 @@ class TrafficLight:
     __color = ["красный", "желтый", "зеленый"]
 
     def running(self):
-
-        while TrafficLight.__color:
+        i = 0
+        while i < 3:
             print(TrafficLight.__color[0])
             time.sleep(7)
             print(TrafficLight.__color[1])
             time.sleep(3)
             print(TrafficLight.__color[2])
             time.sleep(4)
+            i += 1
 
-        # for color in TrafficLight.__color:
-        #     if color == TrafficLight.__color[0]:
-        #         print(color)
-        #         time.sleep(7)
-        #     elif color == TrafficLight.__color[1]:
-        #         print(color)
-        #         time.sleep(2)
-        #     else:
-        #         print(color)
-        #         time.sleep(4)
 
-a = TrafficLight()
-a.running()
+traffic_light = TrafficLight()
+traffic_light.running()

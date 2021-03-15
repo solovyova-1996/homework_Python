@@ -1,3 +1,4 @@
+# __author__ Соловьева Дарья Викторовна
 # 4. Реализуйте базовый класс Car.
 # у класса должны быть следующие атрибуты: speed, color, name, is_police(булево).
 # А также методы: go, stop, turn(direction), которые должны сообщать, что машина поехала, остановилась,
@@ -55,9 +56,33 @@ class PoliceCar(Car):
     pass
 
 
-a = TownCar(777, "grun", "honda", False)
-a.show_speed()
-a.go()
-a.show_speed()
-a.stop()
-a.show_speed()
+town_car = TownCar(100, "grey", "Honda", False)
+print(town_car.max_speed, town_car.color, town_car.name, town_car.is_police)
+
+town_car.go()
+town_car.show_speed()
+town_car.stop()
+town_car.show_speed()
+
+sport_car = SportCar(200, "rad", "Mitsubishi", False)
+print(sport_car.max_speed, sport_car.color, sport_car.name, sport_car.is_police)
+
+sport_car.go()
+sport_car.show_speed()
+sport_car.stop()
+sport_car.turn("направо")
+
+work_car = WorkCar(150, "orange", "Kamaz", False)
+print(work_car.max_speed, work_car.color, work_car.name, work_car.is_police)
+
+work_car.go()
+work_car.show_speed()
+work_car.stop()
+
+police_car = PoliceCar(120, "blue", "BMW", True)
+print(police_car.max_speed, police_car.color, police_car.name, police_car.is_police)
+
+police_car.go()
+police_car.show_speed()
+police_car.turn("налево")
+police_car.stop()

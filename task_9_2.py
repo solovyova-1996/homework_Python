@@ -1,3 +1,4 @@
+# __author__ Соловьева Дарья Викторовна
 # 2. Реализовать класс Road (дорога).
 # определить атрибуты: length (длина), width (ширина);
 # значения атрибутов должны передаваться при создании экземпляра класса;
@@ -8,15 +9,15 @@
 # проверить работу метода.
 # Например: 20 м*5000 м*25 кг*5 см = 12500 т
 
-class Road():
-    def __init__(self):
-        self._length = 5000
-        self._width = 20
+class Road:
+    def __init__(self, length, width):
+        self._length = length
+        self._width = width
 
     def mass_of_asphalt(self, thickness, mass_sq_meter=25):
         mass = self._length * self._width * mass_sq_meter * thickness
         print(f"{int(mass / 1000)} т.")
 
 
-a = Road()
-a.mass_of_asphalt(5)
+road = Road(5000, 20)
+road.mass_of_asphalt(5)
